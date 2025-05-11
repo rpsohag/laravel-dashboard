@@ -1,0 +1,48 @@
+{
+    "name": "rpsohag/laravel-dashboard",
+    "description": "Full featured Laravel admin dashboard package",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "dashboard",
+        "admin",
+        "admin-panel"
+    ],
+    "homepage": "https://github.com/rpsohag/laravel-dashboard",
+    "support": {
+        "issues": "https://github.com/rpsohag/laravel-dashboard/issues",
+        "source": "https://github.com/rpsohag/laravel-dashboard"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rpsohag\\LaravelDashboard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rpsohag\\LaravelDashboard\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RP SOHAG",
+            "email": "your-email@example.com",
+            "homepage": "https://github.com/rpsohag",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^11.0|^12.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rpsohag\\LaravelDashboard\\LaravelDashboardServiceProvider"
+            ]
+        }
+    }
+}
