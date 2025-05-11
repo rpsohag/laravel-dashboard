@@ -3,4 +3,4 @@
 use Illuminate\Support\Facades\Route;
 use Rpsohag\LaravelDashboard\Http\Controllers\DashboardController;
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::get(config('laravel-dashboard.dashboard_url'), [DashboardController::class, 'index'])->name('dashboard.index');

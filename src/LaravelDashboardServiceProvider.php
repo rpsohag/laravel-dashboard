@@ -19,6 +19,10 @@ class LaravelDashboardServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->publishes([
+            __DIR__.'/../config/laravel-dashboard.php' => config_path('laravel-dashboard.php'),
+        ],'laravel-dashboard');
         $this->loadRoutesFrom(__DIR__.'/../routes/dashboard.php');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'LaravelDashboard');
     }
 }
