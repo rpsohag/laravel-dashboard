@@ -8,6 +8,6 @@ class DashboardController extends BaseController
 {
     public function index()
     {
-        return view('LaravelDashboard::dashboard');
+        return view('LaravelDashboard::dashboard.pages.dashboard.index');
     }
 }
