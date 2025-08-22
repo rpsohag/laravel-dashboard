@@ -32,6 +32,7 @@ class LaravelDashboardServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../public/laravel-dashboard/js' => public_path('laravel-dashboard/js'),
             __DIR__.'/../public/laravel-dashboard/css' => public_path('laravel-dashboard/css'),
+            __DIR__.'/../routes/dashboard.php' => base_path('routes'),
         ],'laravel-dashboard');
     }
 }
