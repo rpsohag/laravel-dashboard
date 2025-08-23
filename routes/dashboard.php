@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Rpsohag\LaravelDashboard\Http\Controllers\DashboardController;
+use Rpsohag\LaravelDashboard\Http\Controllers\Backend\DashboardController;
+use Rpsohag\LaravelDashboard\Http\Controllers\Backend\ProfileController;
 
-Route::get(config('laravel-dashboard.dashboard_url'), [DashboardController::class, 'index'])->name('dashboard.index');
-Route::get('dashboard/profile', [DashboardController::class, 'profile'])->name('dashboard.profile');
+$dashboardPrefix = config('laravel-dashboard.dashboard_url');
+
+Route::prefix($dashboardPrefix)->name('dashboard.')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('index');
+    Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+});

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rpsohag\LaravelDashboard\Http\Controllers;
+namespace Rpsohag\LaravelDashboard\Http\Controllers\Backend;
 
 use Illuminate\Routing\Controller as BaseController;
 
