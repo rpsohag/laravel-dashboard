@@ -3,6 +3,6 @@
 
 ## License
 
-This software is released under the [MIT](LICENSE) License.
+This software is released under the [MIT](LICENSE.md) License.
 
 © 2025 RP SOHAG, All rights reserved.
