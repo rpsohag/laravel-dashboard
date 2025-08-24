@@ -10,5 +10,5 @@ return [
     | You can change this to any value you prefer.
     |
     */
-    'route_prefix' => 'dashboard',
+    'dashboard_url' => 'dashboard',
 ];

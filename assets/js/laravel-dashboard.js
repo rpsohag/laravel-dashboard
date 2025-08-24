@@ -10,6 +10,14 @@ const profileDropdown = document.getElementById('profile-dropdown');
 const navTexts = document.querySelectorAll('.nav-text');
 const navItems = document.querySelectorAll('.nav-item');
 const dropdownItems = document.querySelectorAll('.dropdown-item');
+const nav = document.querySelector('.sidebar-nav');
+
+// Initialize sidebar state
+function initializeSidebar() {
+    if (sidebarOpen) {
+        nav.classList.add('h-[calc(100vh-80px)]', 'overflow-y-auto', 'overflow-x-hidden', '[scrollbar-width:thin]', '[scrollbar-color:rgba(255,255,255,0.3)_rgba(0,0,0,0.1)]', '[&::-webkit-scrollbar]:w-[2px]', '[&::-webkit-scrollbar]:h-[2px]');
+    }
+}
 
 function toggleSidebar() {
     sidebarOpen = !sidebarOpen;
@@ -20,6 +28,7 @@ function toggleSidebar() {
         sidebarTitle.classList.remove('hidden');
         sidebarIcon.classList.add('hidden');
         navTexts.forEach(text => text.classList.remove('hidden'));
+        nav.classList.add('h-[calc(100vh-80px)]', 'overflow-y-auto', 'overflow-x-hidden', '[scrollbar-width:thin]', '[scrollbar-color:rgba(255,255,255,0.3)_rgba(0,0,0,0.1)]', '[&::-webkit-scrollbar]:w-[2px]', '[&::-webkit-scrollbar]:h-[2px]');
     } else {
         sidebar.classList.remove('w-64');
         sidebar.classList.add('w-12');
@@ -27,8 +36,7 @@ function toggleSidebar() {
         sidebarIcon.classList.remove('hidden');
         sidebarIcon.classList.add('flex');
         navTexts.forEach(text => text.classList.add('hidden'));
-        
-        // Close all dropdowns when sidebar collapses
+        nav.classList.remove('h-[calc(100vh-80px)]', 'overflow-y-auto', 'overflow-x-hidden', '[scrollbar-width:thin]', '[scrollbar-color:rgba(255,255,255,0.3)_rgba(0,0,0,0.1)]', '[&::-webkit-scrollbar]:w-[2px]', '[&::-webkit-scrollbar]:h-[2px]');
         dropdownItems.forEach(item => {
             const menu = item.querySelector('.dropdown-menu');
             const arrow = item.querySelector('.dropdown-arrow');
@@ -83,3 +91,6 @@ navItems.forEach(item => {
         }
     });
 });
+
+// Initialize sidebar on page load
+initializeSidebar();
