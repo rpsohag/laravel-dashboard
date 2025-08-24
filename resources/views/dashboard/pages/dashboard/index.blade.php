@@ -1,4 +1,4 @@
-@extends('LaravelDashboard::dashboard.layouts.master')
+@extends('dashboard.layouts.master')
 @section('dashboard_content')
  <main class="flex-1 overflow-y-auto p-6 bg-gray-100">
                 <div class="w-full px-4 sm:px-6 lg:px-8">

@@ -1,13 +1,13 @@
 <?php
 
-namespace Rpsohag\LaravelDashboard\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend;
 
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Routing\Controller;
 
-class DashboardController extends BaseController
+class DashboardController extends Controller
 {
     public function index()
     {
-        return view('LaravelDashboard::dashboard.pages.dashboard.index');
+        return view('dashboard.pages.dashboard.index');
     }
 }

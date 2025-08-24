@@ -1,13 +1,13 @@
 <?php
 
-namespace Rpsohag\LaravelDashboard\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend;
 
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Routing\Controller;
 
-class ProfileController extends BaseController
+class ProfileController extends Controller
 {
     public function profile()
     {
-        return view('LaravelDashboard::dashboard.pages.profile.index');
+        return view('dashboard.pages.profile.index');
     }
 }

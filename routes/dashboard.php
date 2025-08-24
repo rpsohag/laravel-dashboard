@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Rpsohag\LaravelDashboard\Http\Controllers\Backend\DashboardController;
-use Rpsohag\LaravelDashboard\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\ProfileController;
 
 $dashboardPrefix = config('laravel-dashboard.dashboard_url');
 

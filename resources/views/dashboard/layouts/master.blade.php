@@ -23,7 +23,7 @@
                     </svg>
                 </div>
             </div>
-            <nav class="mt-6">
+            <nav class="mt-6 h-[calc(100vh-80px)] overflow-y-auto overflow-x-hidden [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.3)_rgba(0,0,0,0.1)] [&::-webkit-scrollbar]:w-[2px] [&::-webkit-scrollbar]:h-[2px]">
                 <div class="relative group nav-item">
                     <a href="/dashboard"
                         class="px-4 py-2 flex items-center text-blue-100 hover:bg-blue-700 cursor-pointer block">
