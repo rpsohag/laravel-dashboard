@@ -1,5 +1,14 @@
 <?php
 
 return [
-    'dashboard_url' => env('DASHBOARD_URL', '/dashboard'),
+    /*
+    |--------------------------------------------------------------------------
+    | Dashboard Route Prefix
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the route prefix for all dashboard routes.
+    | You can change this to any value you prefer.
+    |
+    */
+    'route_prefix' => 'dashboard',
 ];

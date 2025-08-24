@@ -221,27 +221,22 @@
                 </div>
             </nav>
         </div>
-        <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-hidden">
             <header class="bg-white shadow-sm z-10">
                 <div class="flex items-center justify-between p-4">
-                    <button id="sidebar-toggle" class="text-gray-500 focus:outline-none">
+                    <button id="sidebar-toggle" class="text-gray-500 focus:outline-none cursor-pointer">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
                         </svg>
                     </button>
                     <div class="relative">
-                        <button id="profile-toggle"
-                            class="flex items-center space-x-2 focus:outline-none">
-                            <div
-                                class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">
-                                JD</div>
+                        <button id="profile-toggle" class="flex items-center space-x-2 focus:outline-none cursor-pointer">
+                            <div class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">JD</div>
                             <span class="text-gray-700">John Doe</span>
                             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>
                         </button>
-
                         <div id="profile-dropdown"
                             class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20 hidden">
                             <a href="/profile"
