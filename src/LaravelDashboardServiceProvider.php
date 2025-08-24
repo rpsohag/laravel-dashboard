@@ -31,7 +31,7 @@ class LaravelDashboardServiceProvider extends ServiceProvider
             __DIR__.'/../routes/dashboard.php' => base_path('routes/dashboard.php'),
             __DIR__.'/../resources/views' => resource_path('views'),
             __DIR__.'/../assets' => public_path('laravel-dashboard'),
-            __DIR__.'./Http/Controllers/Backend' => app_path('Backend'),
+            __DIR__.'/Http/Controllers/Backend' => base_path('app/Http/Controllers/Backend'),
         ],'laravel-dashboard');
     }
 }
