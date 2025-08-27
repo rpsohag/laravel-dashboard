@@ -1,6 +1,5 @@
 let sidebarOpen = true;
 
-// DOM elements
 const sidebar = document.getElementById('sidebar');
 const sidebarTitle = document.getElementById('sidebar-title');
 const sidebarIcon = document.getElementById('sidebar-icon');
@@ -12,7 +11,6 @@ const navItems = document.querySelectorAll('.nav-item');
 const dropdownItems = document.querySelectorAll('.dropdown-item');
 const nav = document.querySelector('.sidebar-nav');
 
-// Initialize sidebar state
 function initializeSidebar() {
     if (sidebarOpen) {
         nav.classList.add('h-[calc(100vh-80px)]', 'overflow-y-auto', 'overflow-x-hidden', '[scrollbar-width:thin]', '[scrollbar-color:rgba(255,255,255,0.3)_rgba(0,0,0,0.1)]', '[&::-webkit-scrollbar]:w-[2px]', '[&::-webkit-scrollbar]:h-[2px]');
@@ -92,5 +90,36 @@ navItems.forEach(item => {
     });
 });
 
-// Initialize sidebar on page load
+function initializeProfileTabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    if (tabButtons.length > 0) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('border-blue-500', 'text-blue-600');
+                    btn.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+                });
+                
+                const selectedTab = document.getElementById(`${tabId}-tab`);
+                if (selectedTab) {
+                    selectedTab.classList.remove('hidden');
+                }
+                
+                button.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+                button.classList.add('border-blue-500', 'text-blue-600');
+            });
+        });
+    }
+}
+
+// Initialize sidebar and tabs on page load
 initializeSidebar();
+initializeProfileTabs();
